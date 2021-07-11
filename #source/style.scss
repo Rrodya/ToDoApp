@@ -1,0 +1,40 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #361134;
+}
+.wrapped{
+    margin: 160px auto;
+    max-width: 550px;
+    width: 100%;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 26px;
+    padding: 36px 66px;
+    header{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .inputField{
+        display: flex;
+        height: 45px;
+        width: 310px;
+    }
+    input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: 15px;
+        border-radius: 15px;
+        padding-left: 24px;
+        background: rgba(16, 7, 9, .13);        
+        &::-webkit-input-placeholder{
+            color: rgba($color: #FFC2D1, $alpha: .5);
+            font-weight: medium;
+        }
+    }
+    
+}
