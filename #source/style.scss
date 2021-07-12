@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -9,32 +10,126 @@ body{
 }
 .wrapped{
     margin: 160px auto;
-    max-width: 550px;
+    max-width: 510px;
     width: 100%;
     background: rgba(255, 255, 255, .1);
     border-radius: 26px;
-    padding: 36px 66px;
+    padding: 40px 66px;
     header{
         font-size: 32px;
         font-weight: bold;
+        color: #fff;
     }
     .inputField{
         display: flex;
         height: 45px;
-        width: 310px;
-    }
-    input{
+        width: 100%px;
+        margin: 24px auto;
+        justify-content: space-between;
+        button{
+            height: 45px;
+            width: 45px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            background: #EA3788;
+            cursor: pointer;
+            padding-bottom: 5px;
+            span{
+                font-size: 20px;
+                color: #fff;
+                height: 21px;
+                width: 21px;
+                cursor: pointer;                
+            }
+        }
+        input{
+            width: 320px;
+            height: 100%;        
+            border: none;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 0 24px;
+            background: rgba(16, 7, 9, .13);     
+            color: rgba($color: #FFC2D1, $alpha: 1);
+            outline: none;  
+            font-weight: 400; 
+            &::-webkit-input-placeholder{
+                color: rgba($color: #FFC2D1, $alpha: .5);
+                font-weight: 400
+            }
+        }    
+    } 
+    ul{
+        max-height: 430px;
+        overflow-y: auto;
+        li{
+            list-style: none;
+            height: 71.5px;
+            line-height:  71.5px;
+            color: rgba($color: #FFC2D1, $alpha: .9);
+            position: relative;
+            background: rgba($color: #100709, $alpha: .13);
+            border-radius: 15px;
+            margin: 0 0 19px 0;
+            padding: 0 26px;
+            font-weight: 500;
+            cursor: default;
+            overflow: hidden;            
+            &:hover span{
+                right: 0px;
+            }
+            span{
+                position: absolute;
+                right: -71.5px;
+                color: #FF94BA;
+                font-size: 24px;
+                background: rgba($color: #200F13, $alpha: 0.3);
+                border-radius: 0 15px 15px 0;
+                width: 71.5px;
+                text-align: center;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+        }
+        & :last-child{
+            margin-bottom: 0;
+        }
+    }   
+    .footer{
         width: 100%;
-        height: 100%;
-        border: none;
-        font-size: 15px;
-        border-radius: 15px;
-        padding-left: 24px;
-        background: rgba(16, 7, 9, .13);        
-        &::-webkit-input-placeholder{
-            color: rgba($color: #FFC2D1, $alpha: .5);
-            font-weight: medium;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 27px;
+        color: #D26888;
+        align-items: center;
+        button{
+            background: #EA3788;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            height: 45px;
+            width: 140px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        span{
+            font-weight: 500;
         }
     }
+    position: relative;
+    &:before{
+        content: '';
+        width: 300px;
+        height: 400px;
+        background: inherit;
+        position: absolute;
+        left: -25px;
+        top: -25px;
+        box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+        filter: blur(10px);
+    }
+}    
     
-}

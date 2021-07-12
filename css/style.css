@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -12,33 +13,138 @@ body {
 
 .wrapped {
   margin: 160px auto;
-  max-width: 550px;
+  max-width: 510px;
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 26px;
-  padding: 36px 66px;
+  padding: 40px 66px;
+  position: relative;
 }
 .wrapped header {
   font-size: 32px;
   font-weight: bold;
+  color: #fff;
 }
 .wrapped .inputField {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 45px;
-  width: 310px;
+  width: 100% px;
+  margin: 24px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.wrapped input {
-  width: 100%;
+.wrapped .inputField button {
+  height: 45px;
+  width: 45px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: #EA3788;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+.wrapped .inputField button span {
+  font-size: 20px;
+  color: #fff;
+  height: 21px;
+  width: 21px;
+  cursor: pointer;
+}
+.wrapped .inputField input {
+  width: 320px;
   height: 100%;
   border: none;
   font-size: 15px;
   border-radius: 15px;
-  padding-left: 24px;
+  padding: 0 24px;
   background: rgba(16, 7, 9, 0.13);
+  color: #ffc2d1;
+  outline: none;
+  font-weight: 400;
 }
-.wrapped input::-webkit-input-placeholder {
+.wrapped .inputField input::-webkit-input-placeholder {
   color: rgba(255, 194, 209, 0.5);
-  font-weight: medium;
+  font-weight: 400;
+}
+.wrapped ul {
+  max-height: 430px;
+  overflow-y: auto;
+}
+.wrapped ul li {
+  list-style: none;
+  height: 71.5px;
+  line-height: 71.5px;
+  color: rgba(255, 194, 209, 0.9);
+  position: relative;
+  background: rgba(16, 7, 9, 0.13);
+  border-radius: 15px;
+  margin: 0 0 19px 0;
+  padding: 0 26px;
+  font-weight: 500;
+  cursor: default;
+  overflow: hidden;
+}
+.wrapped ul li:hover span {
+  right: 0px;
+}
+.wrapped ul li span {
+  position: absolute;
+  right: -71.5px;
+  color: #FF94BA;
+  font-size: 24px;
+  background: rgba(32, 15, 19, 0.3);
+  border-radius: 0 15px 15px 0;
+  width: 71.5px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.wrapped ul :last-child {
+  margin-bottom: 0;
+}
+.wrapped .footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 27px;
+  color: #D26888;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapped .footer button {
+  background: #EA3788;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  height: 45px;
+  width: 140px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.wrapped .footer span {
+  font-weight: 500;
+}
+.wrapped:before {
+  content: "";
+  width: 300px;
+  height: 400px;
+  background: inherit;
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  -webkit-box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
 }
