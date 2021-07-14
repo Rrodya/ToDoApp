@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("../image/BG.svg");
+    //background-image: url("../image/BG.svg");
+    background-color: #361134;
 }
 .wrapped{
     margin: 160px auto;
@@ -15,7 +16,7 @@ body{
     background: rgba(255, 255, 255, .1);
     border-radius: 26px;
     padding: 40px 66px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     header{
         font-size: 32px;
         font-weight: bold;
@@ -27,40 +28,50 @@ body{
         width: 100%px;
         margin: 24px auto;
         justify-content: space-between;
+
         button{
             height: 45px;
             width: 45px;
             border: none;
             outline: none;
             border-radius: 15px;
-            background: #EA3788;
             cursor: pointer;
             padding-bottom: 5px;
+            background: #a43b6b;
+            transition: all .3s ease;
+            opacity: .6;
+            pointer-events: none;
             span{
                 font-size: 20px;
                 color: #fff;
                 height: 21px;
                 width: 21px;
-                cursor: pointer;                
+                cursor: pointer;
             }
+        }
+        .active{
+          opacity: 1;
+          pointer-events: auto;
+          background: #EA3788;
+          box-shadow: 0 0 10px #EA3788;
         }
         input{
             width: 320px;
-            height: 100%;        
+            height: 100%;
             border: none;
             font-size: 15px;
             border-radius: 15px;
             padding: 0 24px;
-            background: rgba(16, 7, 9, .13);     
+            background: rgba(16, 7, 9, .13);
             color: rgba($color: #FFC2D1, $alpha: 1);
-            outline: none;  
-            font-weight: 400; 
+            outline: none;
+            font-weight: 400;
             &::-webkit-input-placeholder{
                 color: rgba($color: #FFC2D1, $alpha: .5);
                 font-weight: 400
             }
-        }    
-    } 
+        }
+    }
     ul{
         max-height: 430px;
         overflow-y: auto;
@@ -76,7 +87,7 @@ body{
             padding: 0 26px;
             font-weight: 500;
             cursor: default;
-            overflow: hidden;            
+            overflow: hidden;
             &:hover span{
                 right: 0px;
             }
@@ -96,7 +107,7 @@ body{
         & :last-child{
             margin-bottom: 0;
         }
-    }   
+    }
     .footer{
         width: 100%;
         display: flex;
@@ -105,7 +116,7 @@ body{
         color: #D26888;
         align-items: center;
         button{
-            background: #EA3788;
+            //box-shadow: 0 0 10px #EA3788;
             border: none;
             outline: none;
             border-radius: 15px;
@@ -115,14 +126,23 @@ body{
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
+            background: #a43b6b;
+            transition: all .3s ease;
+            opacity: .6;
+            pointer-events: none;
+        }
+        .active{
+          pointer-events: auto;
+          opacity: 1;
+          background: #EA3788;
+          box-shadow: 0 0 10px #EA3788;
         }
         span{
             font-weight: 500;
         }
     }
-}    /*
-.objects{    
-    
+}
+.objects{
     .first_kvad{
         width: 160px;
         height: 160px;
@@ -182,5 +202,4 @@ body{
         transform: rotate(-75deg);
         z-index: -1;
     }
-}*/
-    
+}
